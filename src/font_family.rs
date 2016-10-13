@@ -1,11 +1,12 @@
 use font_style::FontStyle;
 use font_entry::FontEntry;
 
-struct FontFamily {
+pub struct FontFamily {
     name: String,
     available_fonts: Vec<FontEntry>
 }
 
+// This is for functions that are not platform specific.
 impl FontFamily {
     fn add_font_entry(&mut self, font: FontEntry) {
         self.available_fonts.push(font)
@@ -38,4 +39,9 @@ impl FontFamily {
         }
         None
     }
+}
+
+// Here, each platform will have its own function.
+pub trait PlatformFontFamily {
+    fn find_style_variations(font_family: &mut FontFamily);
 }

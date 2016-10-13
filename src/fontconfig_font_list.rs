@@ -90,7 +90,6 @@ unsafe fn find_canonical_name_index(font: *mut FcPattern, lang_slice: &[u8]) -> 
         let lang = c_str_to_string(fc_lang as *const c_char);
         let is_en = lang.starts_with("en");
         if is_en && (lang.len() == 2 || (lang.len() > 2 && language.chars().nth(2) == Some('-'))) {
-            println!("{}", n);
             en = n;
             break;
         }
