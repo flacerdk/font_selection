@@ -1,0 +1,9 @@
+[package]
+name = "font_selection"
+version = "0.1.0"
+authors = ["Felipe Lacerda <fegolac@gmail.com>"]
+
+[dependencies]
+libc = "0.2"
+unicode-script = {version = "0.1", features = ["harfbuzz"]}
+servo-fontconfig = "0.2.1"
