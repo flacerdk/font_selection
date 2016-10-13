@@ -3,6 +3,8 @@ extern crate libc;
 extern crate unicode_script;
 
 mod font_style;
+mod font_family;
+mod font_entry;
 pub mod platform;
 pub mod fontconfig_font_list;
 
